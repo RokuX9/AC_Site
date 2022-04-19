@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-body {
-    background-image: url("./background.jpg");
+.page {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
 }
 
 .navbar {
@@ -11,12 +13,36 @@ body {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navbar__text {
     margin: 0;
     margin-left: auto;
     padding-right: 20px;
+}
+
+.nav__icons {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+    margin-right: 16px;
+}
+
+.nav__icon{
+    height: 32px;
+    width: 32px;
+    -webkit-filter: invert(100%);
+    background-position: center;
+    background-size: contain;
+}
+
+.nav__icon_type_whatsapp{
+    background-image: url("./images/whatsapp.svg");
+}
+
+.nav__icon_type_mail{
+    background-image: url("./images/mail.svg");
 }
 
 .title {
@@ -31,6 +57,8 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, auto);
+    grid-gap: 8px;
+    
 }
 
 .product {
@@ -41,6 +69,7 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin: 0;
     
 }
 
@@ -59,4 +88,93 @@ body {
 
 .product__description {
     padding: 0 10px;
+}
+
+.product__buy {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid black;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.product__buy-button {
+    margin-top: 8px;
+    flex-basis: 100%;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    background-color: red;
+    width: 500px;
+}
+
+.form__input {
+    text-align: center;
+}
+
+.head {
+    background-color: gray;
+    padding: 16px 16px;
+    height: 500px;
+    width: 1280px;
+    margin: 32px auto;
+}
+
+.cart-button {
+    background-color: white;
+    border-radius: 50%;
+    background-image: url("./images/cart.svg");
+    background-position: center;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    border: 0px;
+    height: 64px;
+    width: 64px;
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+}
+
+.kits__header {
+    margin-top: 16px;
+    height: 500px;
+    width: 100%;
+    background-color: gray;
+}
+
+.kits__items {
+    margin-top: 16px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 8px;
+}
+
+.overlay {
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.overlay__cart {
+    position: fixed;
+    bottom: 100px;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
